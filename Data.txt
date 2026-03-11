@@ -1,3 +1,43 @@
+++ Unit 1 ++
+=== Chủ đề: Trường học ===
+だいがく - daigaku - đại học
+がくせい - gakusei - học sinh
+だいがくせい - daigakusei - sinh viên (đại học, cao đẳng) 
+だいがくいんせい - daigakuinsei - học viên cao học 
+がくぶせい - gakubusei - sinh viên đại học
+いんせい - insei - học viên cao học
+けんきゅうせい - kenkyuusei - nghiên cứu sinh
+りゅうがくせい - ryuugakusei - du học sinh
+たんきりゅうがくせい - tanki ryuugakusei - du học sinh trao đổi ngắn hạn
+～がくぶ - gakubu - khoa ~
+～ねんせい - nensei - sinh viên năm ~
+
+=== Chủ đề: Nghề nghiệp ===
+せんせい - sensei - giáo viên, giảng viên 
+
+=== Chủ đề: Ngôn ngữ ===
+にほんご - nihongo - tiếng Nhật
+～ご - go - tiếng ~ 
+
+=== Chủ đề: Con người ===
+わたし - watashi - tôi
+ともだち - tomodachi - bạn bè 
+
+=== Chủ đề: Sở thích / Hoạt động ===
+きます - kimasu - đến
+
+=== Chủ đề: Khác ===
+はじめまして - hajimemashite - rất vui được gặp bạn (nói trong lần đầu gặp)
+こんにちは - konnichiwa - xin chào
+どうぞ よろしく おねがいします - douzo yoroshiku onegaishimasu - rất vui được gặp bạn
+よろしく おねがいします - yoroshiku onegaishimasu - mong được bạn chiếu cố/giúp đỡ
+どうぞ、よろしく - douzo, yoroshiku - rất vui được gặp bạn (cách nói thân mật)
+～からきました - kara kimashita - đến từ ~
+こうがく - kougaku - cơ khí
+マレーシア - mareeshia - Malaysia
+～さい - sai - ~ tuổi
+
++++ Unit 2 +++
 === Chủ đề: Gia đình ===
 かぞく - kazoku - gia đình
 ちち - chichi - ba, bố
@@ -25,8 +65,6 @@
 おくさん - okusan - vợ (người khác)
 むすこさん - musukosan - con trai (người khác)
 むすめさん - musumesan - con gái (người khác)
-そふ - sofu - Ông(Thân thiết)
-そぼ - Sobo - Bà(Thân thiết)
 
 === Chủ đề: Nghề nghiệp ===
 かいしゃいん - kaishain - nhân viên công ty
@@ -94,3 +132,383 @@
 === Chủ đề: Khác ===
 これ - kore - đây là, cái này
 そして - soshite - và rồi
+
+++ Unit 3 ++
+=== Chủ đề: Từ chỉ thời gian ===
+まいにち - mainichi - mỗi ngày
+まいしゅう - maishuu - mỗi tuần
+まいつき - maitsuki - mỗi tháng
+まいとし／まいねん - maitoshi / mainen - mỗi năm
+いちじかんごとに - ichijikan goto ni - cứ mỗi một giờ
+１にちに - 1 nichi ni - một ngày
+しゅうに - shuu ni - một tuần
+つきに - tsuki ni - một tháng
+きんようび - kinyoubi - thứ sáu
+よる - yoru - tối
+とき - toki - khi
+いつも - itsumo - thường, lúc nào cũng
+ふつう - futsuu - thường
+たいてい - taitei - thường
+ときどき - tokidoki - thỉnh thoảng, đôi khi
+たまに - tamani - thỉnh thoảng
+
+=== Chủ đề: Đồ ăn ===
+あさごはん - asagohan - bữa sáng
+パン - pan - bánh mì
+トースト - toosuto - bánh mì nướng
+クロワッサン - kurowassan - bánh con cua
+ベーグル - beeguru - bánh mì vòng
+サンドイッチ - sandoitchi - bánh mì xăng uých
+ハム - hamu - thịt nguội
+やさい - yasai - rau
+サラダ - sarada - rau sống, rau trộn
+フルーツ - furuutsu - trái cây, hoa quả
+パイナップル - painappuru - dứa, thơm
+マンゴー - mangoo - trái xoài
+りんご - ringo - trái táo
+みかん - mikan - trái quýt
+ナシ - nashi - trái lê
+モモ - momo - trái đào
+カキ - kaki - trái hồng
+バナナ - banana - chuối
+キウイ - kiui - kiwi
+ごはん - gohan - cơm
+さかな - sakana - cá
+たまご - tamago - trứng
+のり - nori - rong biển
+みそしる - misoshiru - súp miso
+さしみ - sashimi - sashimi
+やきざかな - yakizakana - cá nướng
+すし - sushi - sushi
+にく - niku - thịt
+ぎゅうにく - gyuuniku - thịt bò
+ぶたにく - butaniku - thịt heo
+とりにく - toriniku - thịt gà
+スープ - suupu - súp
+シュークリーム - shuukuriimu - kem sữa, bánh su kem
+チョコレート - chokoreeto - sô cô la
+クッキー - kukkii - bánh quy
+アイスクリーム - aisukuriimu - kem
+
+=== Chủ đề: Đồ uống ===
+オレンジジュース - orenji juusu - nước cam
+こうちゃ - koucha - hồng trà, trà đen
+ミルクティー - miruku tii - trà sữa
+コーヒー - koohii - cà phê
+ぎゅうにゅう - gyuunyuu - sữa, sữa bò
+ヨーグルト - yooguruto - sữa chua
+コーラ - koora - cola
+ソフトドリンク - sofuto dorinku - thức uống không cồn
+みず - mizu - nước
+ミネラルウォーター - mineraru ootaa - nước khoáng
+さけ - sake - rượu
+ビール - biiru - bia
+ワイン - wain - rượu
+ウイスキー - uisukii - rượu whisky
+にほんしゅ - nihonshu - rượu Nhật
+しょうちゅう - shouchuu - rượu Shochu
+チューハイ - chuuhai - rượu Chuhai
+
+=== Chủ đề: Sở thích / Hoạt động ===
+たべます - tabemasu - ăn
+のみます - nomimasu - uống
+つくります - tsukurimasu - làm, chuẩn bị, nấu
+みます - mimasu - xem
+DVDをみます - DVD o mimasu - xem DVD
+えいがをみます - eiga o mimasu - xem phim
+ききます - kikimasu - nghe
+いきます - ikimasu - đi
+スポーツ - supootsu - thể thao
+テニス - tenisu - tenis
+すいえい - suiei - bơi lội
+します - shimasu - làm, chơi, bơi
+ハイキング - haikingu - đi bộ đường dài
+バドミントン - badominton - cầu lông
+バスケットボール - basuketto booru - bóng rổ
+バレーボール - bareebooru - bóng chuyền
+やきゅう - yakyuu - bóng chày
+たっきゅう - takkyuu - bóng bàn
+おんがく - ongaku - nhạc
+ジャズ - jazu - Jazz
+クラシック - kurashikku - nhạc cổ điển
+ロック - rokku - nhạc rock
+ラテン - raten - nhạc Latinh
+ポップス - poppusu - nhạc Pop
+Jポップ - J-poppu - nhạc J-Pop
+
+=== Chủ đề: Số đếm ===
+～かい - kai - ～ lần
+２・３～ - ni san - hai hoặc ba
+１・２ - ichi ni - một hoặc hai
+いっぽん - ippon - 1 cây/chai
+にほん - nihon - 2 cây/chai
+さんぼん - sanbon - 3 cây/chai
+よんほん - yonhon - 4 cây/chai
+ごほん - gohon - 5 cây/chai
+ろっぽん - roppon - 6 cây/chai
+ななほん - nanahon - 7 cây/chai
+はっぽん - happon - 8 cây/chai
+きゅうほん - kyuuhon - 9 cây/chai
+じゅっぽん - juppon - 10 cây/chai
+いっぱい - ippai - 1 ly
+にはい - nihai - 2 ly
+さんばい - sanbai - 3 ly
+よんはい - yonhai - 4 ly
+ごはい - gohai - 5 ly
+ろっぱい - roppai - 6 ly
+ななはい - nanahai - 7 ly
+はっぱい - happai - 8 ly
+きゅうはい - kyuuhai - 9 ly
+じゅっぱい - juppai - 10 ly
+
+=== Chủ đề: Khác ===
+だいすきな - daisukina - thích
+おいしい - oishii - ngon
+あまい - amai - ngọt
+もの - mono - món, thứ, đồ
+たくさん - takusan - nhiều
+あまり - amari - không ～lắm
+いちばん - ichiban - nhất
+とくに - tokuni - đặc biệt
+とても - totemo - rất
+よく - yoku - thường
+すこし - sukoshi - một chút
+ともだち - tomodachi - bạn
+いっしょに - isshoni - với, cùng với
+ひとりで - hitoride - một mình
+じぶんで - jibunde - tự mình
+にほん - nihon - Nhật Bản
+やま - yama - núi
+～ぶ - bu - câu lạc bộ ～
+でも - demo - nhưng
+
+++ Unit 4 ++
+=== Chủ đề: Thời gian ===
+朝 / あさ - asa - sáng 
+時 / ～じ - ji - ～ giờ 
+半 / ～はん - han - rưỡi 
+分 / ～ふん - fun - ～ phút 
+くらい - kurai - khoảng ～ 
+ごろ - goro - khoảng ～ 
+時間 / ～じかん - jikan - ～ giờ (thời lượng) 
+午後 / ごご - gogo - buổi chiều 
+
+=== Chủ đề: Hoạt động / Động từ ===
+起きます / おきます - okimasu - thức dậy 
+始まります / はじまります - hajimaru - bắt đầu 
+終わります / おわります - owaru - kết thúc 
+帰ります / かえります - kaerimasu - về 
+買います / かいます - kaimasu - mua 
+勉強（を）します / べんきょう（を）します - benkyou (o) shimasu - học 
+ジョギング（を）します - jogingu (o) shimasu - đi bộ, chạy bộ 
+読みます / よみます - yomimasu - đọc 
+仕事（を）します / しごと（を）します - shigoto (o) shimasu - làm việc 
+あります（会議が） / あります（かいぎが） - arimasu (kaigi ga) - có (cuộc họp) 
+チェック（を）します - chekku (o) shimasu - kiểm tra, check 
+入ります（お風呂に） / はいります（おふろに） - hairimasu (ofuro ni) - tắm bồn 
+寝ます / ねます - nemasu - ngủ 
+パソコンでニュースを見ます / パソコンでニュースをみます - pasokon de nyuusu o mimasu - xem thời sự bằng máy tính 
+
+=== Chủ đề: Nhà hàng / món ăn ===
+昼ごはん / ひるごはん - hirugohan - bữa trưa 
+晩ごはん / ばんごはん - bangohan - bữa tối 
+（お）弁当 / （お）べんとう - (o)bentou - cơm hộp 
+ハンバーガー - hanbaagaa - ham-ba-gơ 
+カップラーメン - kappuraamen - mỳ ly ăn liền 
+
+=== Chủ đề: Địa điểm ===
+学校 / がっこう - gakkou - trường 
+食堂 / しょくどう - shokudou - nhà ăn, căn tin 
+図書館 / としょかん - toshokan - thư viện 
+うち - uchi - nhà 
+研究室 / けんきゅうしつ - kenkyuushitsu - phòng nghiên cứu 
+部屋 / へや - heya - phòng 
+映画 / えいが - eiga - phim 
+銀行 / ぎんこう - ginkou - ngân hàng 
+
+=== Chủ đề: Phương tiện ===
+自転車 / じてんしゃ - jitensha - xe đạp 
+電車 / でんしゃ - densha - tàu điện 
+地下鉄 / ちかてつ - chikatetsu - tàu điện ngầm 
+バス - basu - xe buýt 
+モノレール - monoreeru - tàu một ray 
+タクシー - takushii - xe taxi 
+車 / くるま - kuruma - xe ô tô 
+歩いて / あるいて - aruite - đi bộ 
+
+=== Chủ đề: Tính từ ===
+近い / ちかい - chikai - gần 
+遠い / とおい - tooi - xa 
+
+=== Chủ đề: Khác ===
+授業 / じゅぎょう - juugyou - giờ học, tiết học 
+それから - sorekara - sau đó 
+テレビ - terebi - ti-vi 
+ニュース - nyuusu - tin tức 
+新聞 / しんぶん - shinbun - báo 
+実験 / じっけん - jikken - thí nghiệm 
+仕事 / しごと - shigoto - công việc 
+会議 / かいぎ - kaigi - họp 
+後 / あと - ato - sau 
+メール - meeru - email 
+お風呂 / （お）ふろ - (o)furo - bồn tắm 
+インターネット - intaanetto - internet 
+ドラマ - dorama - kịch 
+～たち - tachi - hậu tố chỉ số nhiều (người) 
+本 / ほん - hon - sách
+
+++ Unit 5 ++
+=== Chủ đề: Nhà hàng / món ăn ===
+料理 / りょうり - ryouri - món ăn
+レストラン - resutoran - nhà hàng
+イタリアン - itarian - món Ý
+マレーシア料理 / マレーシアりょうり - mareeshia ryouri - món ăn Malaysia
+～料理 / ～りょうり - ryouri - món ăn ～
+焼きそば / やきそば - yakisoba - mì xào yakisoba
+焼き肉 / やきにく - yakiniku - thịt nướng
+焼肉 / やきとり - yakitori - gà nướng (theo dữ liệu)
+魚料理 / さかりょうり - sakana ryouri - món ăn làm từ cá
+パスタ - pasuta - mỳ Ý
+スープ - suupu - súp
+メイン（料理） / メイン（りょうり） - mein (ryouri) - món chính
+ポーク - pooku - thịt heo
+チキン - chikin - thịt gà
+お好み焼き / おこのみ焼き - okonomiyaki - bánh xèo Nhật
+たこ焼き / たこやき - takoyaki - bánh bạch tuộc nướng
+野菜炒め / やさいいため - yasai itame - rau xào
+すき焼き / すきやき - sukiyaki - món lẩu sukiyaki
+天ぷら / てんぷら - tenpura - món tempura
+しゃぶしゃぶ - shabu shabu - món lẩu shabu shabu
+グラタン - guratan - món gratin
+チーズケーキ - chiizu keeki - bánh phô mai
+プリン - purin - bánh flan
+タイ料理 / たいりょうり - tai ryouri - món Thái
+インド料理 / いんどりょうり - indo ryouri - món Ấn
+ベトナム料理 / ベトナムりょうり - betonamu ryouri - món Việt
+メキシコ料理 / メキシコりょうり - mekishiko ryouri - món Mêxicô
+フランス料理 / フランスりょうり - furansu ryouri - món Pháp
+イタリア料理 / イタリアりょうり - itaria ryouri - món Ý
+スペイン料理 / スペインりょうり - supein ryouri - món Tây Ban Nha
+韓国料理 / かんこくりょうり - kankoku ryouri - món Hàn
+中華料理 / ちゅうかりょうり - chuuka ryouri - món Hoa
+和食 / わしょく - washoku - món Nhật
+辛い物 / からいもの - karaimono - món cay
+
+=== Chủ đề: Cửa hàng ===
+店 / みせ - mise - nhà hàng, cửa hàng
+焼き肉屋 / やきにくや - yakinikuya - nhà hàng thịt nướng
+～屋 / ～や - ya - cửa hàng ～
+中華の店 / ちゅうかの店 - chuuka no mise - tiệm Hoa
+フレンチの店 / フレンチのみせ - furenchi no mise - tiệm Pháp
+和食の店 / わしょくのみせ - washoku no mise - tiệm Nhật
+天ぷら屋 / てんぷらや - tenpuraya - tiệm Tempura
+（お）寿司屋 / （お）すしや - (o)sushiya - tiệm Sushi
+回転寿司 / かいてんずし - kaitenzushi - sushi băng chuyền
+お好み焼き屋 / おこのみやきや - okonomiyakiya - tiệm bánh xèo
+ラーメン屋 / ラーメンや - raamenya - tiệm mì Ramen
+うどん屋 / うどんや - udonya - tiệm mì Udon
+そば屋 / そばや - sobaya - tiệm mì Soba
+
+=== Chủ đề: Tính từ ===
+色々な / いろいろな - iroiro na - nhiều, đa dạng
+上手な / じょうずな - jouzu na - giỏi
+楽しい / たのしい - tanoshii - vui
+安い / やすい - yasui - rẻ
+下手な / へたな - heta na - kém, dở
+小さい / ちいさい - chiisai - nhỏ, bé
+古い / ふるい - furui - cũ
+素敵な / すてきな - suteki na - dễ thương, tuyệt vời
+黒い / くろい - kuroi - màu đen
+親切な / しんせつな - shinsetsu na - thân thiện, tốt bụng
+いい / いい - ii - tốt
+大きい店 / おおきいみせ - ookii mise - cửa hàng lớn
+高い店 / たかいみせ - takai mise - nhà hàng đắt tiền
+新しい / あたらしい - atarashii - mới
+
+=== Chủ đề: Con người ===
+皆 / みんな - minna - mọi người, tất cả
+先輩 / せんぱい - senpai - tiền bối, sinh viên khóa trên
+彼女 / かのじょ - kanojo - bạn gái, cô ấy
+人 / ひと - hito - người
+彼（氏） / かれ（し） - kare (shi) - bạn trai
+後輩 / こうはい - kouhai - hậu bối, sinh viên khóa dưới
+
+=== Chủ đề: Hoạt động ===
+話します / はなします - hanashimasu - nói chuyện
+あります（店が） / あります（みせが） - arimasu (mise ga) - có (nhà hàng)
+注文します / ちゅうもんします - chuumon shimasu - gọi món, đặt hàng
+楽しみます / たのしみま - tanoshimimasu - thưởng thức
+入ります（店に） / はいります（みせに） - hairimasu (mise ni) - vào (cửa hàng)
+座ります / すわります - suwarimasu - ngồi
+お金を払います / おかねをはらいます - okane o haraimasu - trả tiền, thanh toán
+
+=== Chủ đề: Thời gian ===
+時間 / じかん - jikan - thời gian
+先週 / せんしゅう - senshuu - tuần trước
+今週 / こんしゅう - konshuu - tuần này
+来週 / らいしゅう - raishuu - tuần sau
+去年 / きょねん - kyonen - năm ngoái
+今年 / ことし - kotoshi - năm nay
+来年 / らいねん - rainen - năm sau
+昨日 / きのう - kinou - hôm qua
+今日 / きょう - kyou - hôm nay
+
+=== Chủ đề: Ngày trong tuần ===
+月曜日 / げつようび - getsuyoubi - thứ hai
+火曜日 / かようび - kayoubi - thứ ba
+水曜日 / すいようび - suiyoubi - thứ tư
+木曜日 / もくようび - mokuyoubi - thứ năm
+金曜日 / きんようび - kinyoubi - thứ sáu
+土曜日 / どようび - doyoubi - thứ bảy
+日曜日 / にちようび - nichiyoubi - chủ nhật
+
+=== Chủ đề: Tháng trong năm ===
+一月 / いちがつ - ichigatsu - tháng 1
+二月 / にがつ - nigatsu - tháng 2
+三月 / さんがつ - sangatsu - tháng 3
+四月 / しがつ - shigatsu - tháng 4
+五月 / ごがつ - gogatsu - tháng 5
+六月 / ろくがつ - rokugatsu - tháng 6
+七月 / しちがつ - shichigatsu - tháng 7
+八月 / はちがつ - hachigatsu - tháng 8
+九月 / きゅうがつ - kyuugatsu - tháng 9
+十月 / じゅうがつ - juugatsu - tháng 10
+十一月 / じゅういちがつ - juuichigatsu - tháng 11
+十二月 / じゅうにがつ - juunigatsu - tháng 12
+
+=== Chủ đề: Ngày trong tháng ===
+一日 / ついたち - tsuitachi - ngày 1
+二日 / ふつか - futsuka - ngày 2
+三日 / みっか - mikka - ngày 3
+四日 / よっka - yokka - ngày 4
+五日 / いつか - itsuka - ngày 5
+六日 / むいか - muika - ngày 6
+七日 / なのか - nanoka - ngày 7
+八日 / ようか - youka - ngày 8
+九日 / ここのか - kokonoka - ngày 9
+十日 / とおか - tooka - ngày 10
+十一日 / じゅういちにち - juuichinichi - ngày 11
+十四日 / じゅうよっか - juuyokka - ngày 14
+二十日 / はつか - hatsuka - ngày 20
+二十四日 / にじゅうよっか - nijuuyokka - ngày 24
+三十一日 / さんじゅういちにち - sanjuuichinichi - ngày 31
+
+=== Chủ đề: Địa điểm ===
+寮 / りょう - ryou - ký túc xá
+国 / くに - kuni - đất nước
+近く / ちかく - chikaku - gần
+奥 / おく - oku - bên trong, góc
+
+=== Chủ đề: Khác ===
+話 / はなし - hanashi - câu chuyện
+その - sono - đó
+最後に / さいごに - saigo ni - cuối cùng
+本当に / ほんとうに - hontou ni - thật sự
+ちょっと - chotto - một chút
+最初に / さいしょに - saisho ni - đầu tiên
+最後 / さいご - saigo - cuối cùng
+テーブル - teeburu - bàn
+ワイン - wain - rượu vang
+ソース - soosu - nước sốt
+白いソース / しろいソース - shiroi soosu - sốt kem (sốt trắng)
+新しいパソコン / あたらしいパソコン - atarashii pasokon - máy tính mới

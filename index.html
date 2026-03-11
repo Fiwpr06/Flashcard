@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="vi">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Flashcard Tiếng Nhật</title>
+    <title>Japanese Flashcard</title>
     <link rel="stylesheet" href="style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Nunito:wght@400;600;700&display=swap"
@@ -13,40 +13,31 @@
   <body>
     <div class="app">
       <header>
-        <h1>🇯🇵 Flashcard Tiếng Nhật</h1>
+        <h1>🇯🇵 Japanese Flashcard</h1>
       </header>
 
-      <!-- Topic checkboxes -->
-      <div class="topic-panel">
-        <div class="topic-panel-header">
-          <span class="topic-panel-title">Chọn chủ đề:</span>
-          <button
-            class="btn btn-sm"
-            id="selectAllBtn"
-            onclick="toggleSelectAll()"
-          >
-            Chọn tất cả
-          </button>
-        </div>
-        <div class="topic-checkboxes" id="topicCheckboxes"></div>
-      </div>
+      <!-- Navigation -->
+      <nav class="nav">
+        <div class="unit-tabs" id="unitTabs"></div>
+        <div class="topic-chips" id="topicChips"></div>
+      </nav>
 
       <!-- Stats -->
       <div class="stats-panel" id="statsPanel">
         <div class="stat-item">
-          <span class="stat-label">Tổng số từ</span>
+          <span class="stat-label">Total</span>
           <span class="stat-value" id="statTotal">0</span>
         </div>
         <div class="stat-item stat-known">
-          <span class="stat-label">✅ Đã thuộc</span>
+          <span class="stat-label">✅ Known</span>
           <span class="stat-value" id="statKnown">0</span>
         </div>
         <div class="stat-item stat-unknown">
-          <span class="stat-label">❌ Chưa thuộc</span>
+          <span class="stat-label">❌ Unknown</span>
           <span class="stat-value" id="statUnknown">0</span>
         </div>
         <div class="stat-item stat-progress">
-          <span class="stat-label">📊 Tiến độ</span>
+          <span class="stat-label">📊 Progress</span>
           <span class="stat-value" id="statPercent">0%</span>
         </div>
       </div>
@@ -54,7 +45,7 @@
       <main>
         <div class="progress" id="progress">Card 0 / 0</div>
         <div class="review-badge" id="reviewBadge" style="display: none">
-          🔁 Ôn lại từ chưa thuộc
+          🔁 Reviewing unknown words
         </div>
 
         <div
@@ -64,10 +55,11 @@
         >
           <div class="flashcard" id="flashcard">
             <div class="card-face card-front" id="card-front">
+              <div class="kanji" id="kanji"></div>
               <div class="kana" id="kana">—</div>
-              <div class="romaji" id="romaji">—</div>
             </div>
             <div class="card-face card-back" id="card-back">
+              <div class="romaji" id="romaji">—</div>
               <div class="meaning" id="meaning">—</div>
             </div>
           </div>
@@ -76,34 +68,34 @@
         <!-- Known/Unknown buttons (visible after flip) -->
         <div class="mark-buttons" id="markButtons">
           <button class="btn btn-known" onclick="markCard('known')">
-            ✅ Đã thuộc
+            ✅ Known
           </button>
           <button class="btn btn-notknown" onclick="markCard('unknown')">
-            ❌ Chưa thuộc
+            ❌ Unknown
           </button>
         </div>
 
         <div class="controls">
-          <button class="btn" onclick="prevCard()" title="Trước">
-            ⬅ Trước
+          <button class="btn" onclick="prevCard()" title="Previous">
+            ⬅ Prev
           </button>
-          <button class="btn btn-flip" onclick="flipCard()" title="Lật thẻ">
-            🔄 Lật
+          <button class="btn btn-flip" onclick="flipCard()" title="Flip">
+            🔄 Flip
           </button>
           <button
             class="btn btn-shuffle"
             onclick="shuffleCards()"
-            title="Xáo trộn"
+            title="Shuffle"
           >
-            🔀 Xáo
+            🔀 Shuffle
           </button>
-          <button class="btn" onclick="nextCard()" title="Tiếp">Tiếp ➡</button>
+          <button class="btn" onclick="nextCard()" title="Next">Next ➡</button>
         </div>
 
         <div class="controls-secondary">
           <label class="mode-toggle">
             <input type="checkbox" id="randomMode" onchange="toggleMode()" />
-            Học ngẫu nhiên
+            Random mode
           </label>
           <button class="btn btn-reset" onclick="resetProgress()">
             🗑 Reset Progress
@@ -112,7 +104,7 @@
       </main>
 
       <footer>
-        <p>Space: lật thẻ | ← →: chuyển thẻ | S: xáo trộn</p>
+        <p>Space: flip | ← →: navigate | S: shuffle</p>
       </footer>
     </div>
 

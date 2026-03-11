@@ -1,26 +1,47 @@
 // === DỮ LIỆU TỪ VỰNG (tự động đọc từ Data.txt) ===
+// vocabData = { "Unit 1": { "Trường học": [...], ... }, "Unit 2": { ... } }
 let vocabData = {};
 
 function parseDataTxt(text) {
   const data = {};
+  let currentUnit = null;
   let currentTopic = null;
   const lines = text.split("\n");
   for (const line of lines) {
     const trimmed = line.trim();
     if (!trimmed) continue;
+    const unitMatch = trimmed.match(/^\+{1,3}\s*(.+?)\s*\+{1,3}$/);
+    if (unitMatch) {
+      currentUnit = unitMatch[1].trim();
+      if (!data[currentUnit]) data[currentUnit] = {};
+      currentTopic = null;
+      continue;
+    }
     const topicMatch = trimmed.match(/^===\s*Chủ đề:\s*(.+?)\s*===$/);
     if (topicMatch) {
       currentTopic = topicMatch[1];
-      data[currentTopic] = [];
+      if (!currentUnit) {
+        currentUnit = "Khác";
+        if (!data[currentUnit]) data[currentUnit] = {};
+      }
+      if (!data[currentUnit][currentTopic])
+        data[currentUnit][currentTopic] = [];
       continue;
     }
-    if (currentTopic) {
+    if (currentUnit && currentTopic) {
       const parts = trimmed.split(" - ");
       if (parts.length >= 3) {
-        const kana = parts[0].trim();
+        const raw = parts[0].trim();
+        let kanji = "";
+        let kana = raw;
+        if (raw.includes(" / ")) {
+          const split = raw.split(" / ");
+          kanji = split[0].trim();
+          kana = split[1].trim();
+        }
         const romaji = parts[1].trim();
         const meaning = parts.slice(2).join(" - ").trim();
-        data[currentTopic].push({ kana, romaji, meaning });
+        data[currentUnit][currentTopic].push({ kanji, kana, romaji, meaning });
       }
     }
   }
@@ -31,6 +52,25 @@ async function loadVocabData() {
   const response = await fetch("Data.txt");
   const text = await response.text();
   vocabData = parseDataTxt(text);
+}
+
+// Helper: get all unique topic keys "unit|topic"
+function allTopicKeys() {
+  const keys = [];
+  for (const unit of Object.keys(vocabData)) {
+    for (const topic of Object.keys(vocabData[unit])) {
+      keys.push(unit + "|" + topic);
+    }
+  }
+  return keys;
+}
+
+// Helper: get cards for a topic key
+function getCardsForKey(key) {
+  const [unit, topic] = key.split("|");
+  return vocabData[unit] && vocabData[unit][topic]
+    ? vocabData[unit][topic]
+    : [];
 }
 
 // === UNIQUE KEY for each card ===
@@ -67,15 +107,18 @@ function setCardStatus(card, status) {
 
 // === STATE ===
 let selectedTopics = new Set();
+let activeUnit = "all"; // "all" or a unit name
 let currentCards = [];
 let currentIndex = 0;
 let isFlipped = false;
 let isReviewMode = false;
 
 // === DOM ===
-const topicCheckboxes = document.getElementById("topicCheckboxes");
+const unitTabsEl = document.getElementById("unitTabs");
+const topicChipsEl = document.getElementById("topicChips");
 const flashcard = document.getElementById("flashcard");
 const flashcardContainer = document.getElementById("flashcard-container");
+const kanjiEl = document.getElementById("kanji");
 const kanaEl = document.getElementById("kana");
 const romajiEl = document.getElementById("romaji");
 const meaningEl = document.getElementById("meaning");
@@ -83,7 +126,6 @@ const progressEl = document.getElementById("progress");
 const randomCheckbox = document.getElementById("randomMode");
 const markButtonsEl = document.getElementById("markButtons");
 const reviewBadge = document.getElementById("reviewBadge");
-const selectAllBtn = document.getElementById("selectAllBtn");
 
 // Stats
 const statTotal = document.getElementById("statTotal");
@@ -94,86 +136,116 @@ const statPercent = document.getElementById("statPercent");
 // === INIT ===
 async function init() {
   await loadVocabData();
-  buildTopicCheckboxes();
-  // Default: select all topics
-  const topics = Object.keys(vocabData);
-  topics.forEach((t) => selectedTopics.add(t));
-  updateCheckboxUI();
-  rebuildCards();
+  buildNav();
+  selectUnit("all");
   updateStats();
 }
 
-function buildTopicCheckboxes() {
-  const topics = Object.keys(vocabData);
-  topicCheckboxes.innerHTML = "";
-  topics.forEach((topic) => {
-    const label = document.createElement("label");
-    const cb = document.createElement("input");
-    cb.type = "checkbox";
-    cb.value = topic;
-    cb.checked = true;
-    cb.addEventListener("change", onTopicCheck);
-    const count = vocabData[topic].length;
-    label.appendChild(cb);
-    label.appendChild(document.createTextNode(topic + " (" + count + ")"));
-    label.classList.add("checked");
-    topicCheckboxes.appendChild(label);
-  });
+// === NAVIGATION ===
+function buildNav() {
+  // Unit tabs
+  unitTabsEl.innerHTML = "";
+  const allTab = document.createElement("button");
+  allTab.className = "unit-tab active";
+  allTab.textContent = "All";
+  allTab.addEventListener("click", () => selectUnit("all"));
+  unitTabsEl.appendChild(allTab);
+
+  for (const unit of Object.keys(vocabData)) {
+    const tab = document.createElement("button");
+    tab.className = "unit-tab";
+    tab.textContent = unit;
+    tab.addEventListener("click", () => selectUnit(unit));
+    unitTabsEl.appendChild(tab);
+  }
 }
 
-function onTopicCheck(e) {
-  const topic = e.target.value;
-  if (e.target.checked) {
-    selectedTopics.add(topic);
-    e.target.parentElement.classList.add("checked");
+function selectUnit(unit) {
+  activeUnit = unit;
+
+  // Update active tab
+  unitTabsEl.querySelectorAll(".unit-tab").forEach((t) => {
+    t.classList.toggle(
+      "active",
+      (unit === "all" && t.textContent === "All") || t.textContent === unit,
+    );
+  });
+
+  // Select all topics for this unit
+  selectedTopics.clear();
+  if (unit === "all") {
+    allTopicKeys().forEach((k) => selectedTopics.add(k));
   } else {
-    selectedTopics.delete(topic);
-    e.target.parentElement.classList.remove("checked");
+    for (const topic of Object.keys(vocabData[unit])) {
+      selectedTopics.add(unit + "|" + topic);
+    }
   }
+
+  buildTopicChips();
   isReviewMode = false;
   reviewBadge.style.display = "none";
   rebuildCards();
   updateStats();
 }
 
-function toggleSelectAll() {
-  const topics = Object.keys(vocabData);
-  const allSelected = selectedTopics.size === topics.length;
+function buildTopicChips() {
+  topicChipsEl.innerHTML = "";
+  const units = activeUnit === "all" ? Object.keys(vocabData) : [activeUnit];
 
-  if (allSelected) {
-    // Deselect all
-    selectedTopics.clear();
+  if (activeUnit === "all") {
+    // Merge same-name topics across units
+    const merged = {};
+    for (const unit of units) {
+      for (const topic of Object.keys(vocabData[unit])) {
+        if (!merged[topic]) merged[topic] = [];
+        merged[topic].push(unit + "|" + topic);
+      }
+    }
+    for (const topic of Object.keys(merged)) {
+      const keys = merged[topic];
+      const count = keys.reduce((s, k) => s + getCardsForKey(k).length, 0);
+      const chip = document.createElement("button");
+      chip.textContent = topic + " (" + count + ")";
+      chip.className = "topic-chip active";
+      chip.dataset.keys = JSON.stringify(keys);
+      chip.addEventListener("click", () => toggleMergedTopic(keys, chip));
+      topicChipsEl.appendChild(chip);
+    }
   } else {
-    // Select all
-    topics.forEach((t) => selectedTopics.add(t));
+    for (const topic of Object.keys(vocabData[activeUnit])) {
+      const key = activeUnit + "|" + topic;
+      const count = vocabData[activeUnit][topic].length;
+      const chip = document.createElement("button");
+      chip.textContent = topic + " (" + count + ")";
+      chip.className = "topic-chip active";
+      chip.dataset.keys = JSON.stringify([key]);
+      chip.addEventListener("click", () => toggleMergedTopic([key], chip));
+      topicChipsEl.appendChild(chip);
+    }
   }
-  updateCheckboxUI();
+}
+
+function toggleMergedTopic(keys, chip) {
+  const allActive = keys.every((k) => selectedTopics.has(k));
+  if (allActive) {
+    keys.forEach((k) => selectedTopics.delete(k));
+    chip.classList.remove("active");
+  } else {
+    keys.forEach((k) => selectedTopics.add(k));
+    chip.classList.add("active");
+  }
   isReviewMode = false;
   reviewBadge.style.display = "none";
   rebuildCards();
   updateStats();
-}
-
-function updateCheckboxUI() {
-  const labels = topicCheckboxes.querySelectorAll("label");
-  labels.forEach((label) => {
-    const cb = label.querySelector("input");
-    cb.checked = selectedTopics.has(cb.value);
-    label.classList.toggle("checked", cb.checked);
-  });
-  // Update button text
-  const topics = Object.keys(vocabData);
-  selectAllBtn.textContent =
-    selectedTopics.size === topics.length ? "Bỏ chọn tất cả" : "Chọn tất cả";
 }
 
 // === BUILD CARDS FROM SELECTED TOPICS ===
 function rebuildCards() {
   currentCards = [];
-  selectedTopics.forEach((topic) => {
-    if (vocabData[topic]) {
-      currentCards = currentCards.concat(vocabData[topic]);
-    }
+  selectedTopics.forEach((key) => {
+    const cards = getCardsForKey(key);
+    currentCards = currentCards.concat(cards);
   });
 
   if (randomCheckbox.checked) {
@@ -183,13 +255,6 @@ function rebuildCards() {
   currentIndex = 0;
   isFlipped = false;
   showCard();
-  updateSelectAllBtn();
-}
-
-function updateSelectAllBtn() {
-  const topics = Object.keys(vocabData);
-  selectAllBtn.textContent =
-    selectedTopics.size === topics.length ? "Bỏ chọn tất cả" : "Chọn tất cả";
 }
 
 // === DISPLAY ===
@@ -198,9 +263,10 @@ function showCard() {
   markButtonsEl.classList.remove("visible");
 
   if (currentCards.length === 0) {
+    kanjiEl.textContent = "";
     kanaEl.textContent = "—";
-    romajiEl.textContent = "Chọn chủ đề để bắt đầu";
-    meaningEl.textContent = "—";
+    romajiEl.textContent = "";
+    meaningEl.textContent = "Select a topic to start";
     progressEl.textContent = "Card 0 / 0";
     flashcard.classList.remove("flipped");
     isFlipped = false;
@@ -212,6 +278,8 @@ function showCard() {
   flashcard.classList.remove("flipped");
 
   const card = currentCards[currentIndex];
+  kanjiEl.textContent = card.kanji || "";
+  kanjiEl.style.display = card.kanji ? "" : "none";
   kanaEl.textContent = card.kana;
   romajiEl.textContent = card.romaji;
   meaningEl.textContent = card.meaning;
@@ -355,15 +423,14 @@ function updateStats() {
   let unknown = 0;
 
   // Count only from selected topics
-  selectedTopics.forEach((topic) => {
-    if (vocabData[topic]) {
-      vocabData[topic].forEach((card) => {
-        total++;
-        const status = progress[cardKey(card)];
-        if (status === "known") known++;
-        else if (status === "unknown") unknown++;
-      });
-    }
+  selectedTopics.forEach((key) => {
+    const cards = getCardsForKey(key);
+    cards.forEach((card) => {
+      total++;
+      const status = progress[cardKey(card)];
+      if (status === "known") known++;
+      else if (status === "unknown") unknown++;
+    });
   });
 
   statTotal.textContent = total;
@@ -375,8 +442,7 @@ function updateStats() {
 
 // === RESET ===
 function resetProgress() {
-  if (!confirm("Xóa toàn bộ tiến độ học? Hành động này không thể hoàn tác."))
-    return;
+  if (!confirm("Reset all progress? This action cannot be undone.")) return;
   localStorage.removeItem(STORAGE_KEY);
   isReviewMode = false;
   reviewBadge.style.display = "none";
