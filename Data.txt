@@ -1,0 +1,96 @@
+=== Chủ đề: Gia đình ===
+かぞく - kazoku - gia đình
+ちち - chichi - ba, bố
+はは - haha - mẹ, má
+あに - ani - anh trai
+あね - ane - chị gái
+おとうto - otouto - em trai
+いもうと - imouto - em gái
+おっと - otto - chồng
+つま - tsuma - vợ
+ごかぞく - gokazoku - gia đình (người khác)
+おじいさん - ojiisan - ông
+おばあさん - obaasan - bà
+おじさん - ojisan - chú, bác, cậu
+おばさん - obasan - cô, bác, dì
+おとうさん - otousan - ba, bố, cha (người khác/gọi ba mình)
+おかあさん - okaasan - mẹ, má (người khác/gọi mẹ mình)
+おにいさん - oniisan - anh trai (người khác/gọi anh mình)
+おねえさん - oneesan - chị gái (người khác/gọi chị mình)
+おとうとさん - otoutosan - em trai (người khác)
+いもうとさん - imoutosan - em gái (người khác)
+ごりょうしん - goryoushin - bố mẹ, ba mẹ (người khác)
+ごきょうだい - gokyoudai - anh chị em (người khác)
+ごしゅじん - goshujin - chồng (người khác)
+おくさん - okusan - vợ (người khác)
+むすこさん - musukosan - con trai (người khác)
+むすめさん - musumesan - con gái (người khác)
+そふ - sofu - Ông(Thân thiết)
+そぼ - Sobo - Bà(Thân thiết)
+
+=== Chủ đề: Nghề nghiệp ===
+かいしゃいん - kaishain - nhân viên công ty
+ぎんこういん - ginkouin - nhân viên ngân hàng
+がっこうのせんせい - gakkou no sensei - giáo viên
+いしゃ - isha - bác sĩ
+べんごし - bengoshi - luật sư
+かいけいし - kaikeishi - kế toán
+こうむいん - koumuin - công chức viên
+しゃちょう - shachou - giám đốc
+しゅふ - shufu - nội trợ
+ビジネスコンサルタント - bijinesu konsarutanto - tư vấn kinh doanh
+
+=== Chủ đề: Trường học ===
+しょうがっこう - shougakkou - trường tiểu học
+ちゅうがっこう - chuugakkou - trường trung học (cấp 2)
+ちゅうがく - chuugaku - trường cấp 2
+こうこう - koukou - trường cấp 3
+だいがくいん - daigakuin - cao học
+しょうがくせい - shougakusei - học sinh tiểu học
+ちゅうがくせい - chuugakusei - học sinh cấp 2
+こうこうせい - koukousei - học sinh cấp 3
+だいがくせい - daigakusei - sinh viên
+だいがくいんせい - daigakuinse i - học viên cao học
+
+=== Chủ đề: Ngôn ngữ ===
+にほんがく - nihongaku - nhật bản học
+えいご - eigo - tiếng Anh
+ちゅうごくご - chuugokugo - tiếng Trung Quốc
+かんこくご - kankokugo - tiếng Hàn Quốc
+フランスご - furansugo - tiếng Pháp
+ドイツご - doitsugo - tiếng Đức
+イタリアご - itariago - tiếng Ý
+スペインご - supeingo - tiếng Tây Ban Nha
+ポルトガルご - porutogarugo - tiếng Bồ Đào Nha
+ロシアご - roshiago - tiếng Nga
+タイご - taigo - tiếng Thái
+ベトナムご - betonamugo - tiếng Việt
+マレーシアご - mareeshiago - tiếng Malaysia
+インドネシアご - indoneshiago - tiếng Indonesia
+トルコご - torukogo - tiếng Thổ Nhĩ Kỳ
+ヒンディーご - hindiigo - tiếng Ấn Độ
+モンゴルご - mongorugo - tiếng Mông Cổ
+アラビアご - arabiago - tiếng Ả Rập
+
+=== Chủ đề: Con người ===
+こども - kodomo - con nít, con, trẻ em
+おんなのこ - onnanoko - con gái
+おとこのこ - otokonoko - con trai
+ふたり - futari - hai người
+～にん - nin - ~ người (dùng để đếm người)
+
+=== Chủ đề: Từ chỉ vị trí ===
+うえ - ue - trên
+した - shita - dưới
+
+=== Chủ đề: Từ chỉ thời gian ===
+いま - ima - bây giờ
+
+=== Chủ đề: Sở thích / hoạt động ===
+しょうかいします - shoukaishimasu - giới thiệu
+サッカー - sakkaa - đá bóng
+すきな - sukina - thích
+
+=== Chủ đề: Khác ===
+これ - kore - đây là, cái này
+そして - soshite - và rồi
