@@ -512,3 +512,257 @@ Jポップ - J-poppu - nhạc J-Pop
 ソース - soosu - nước sốt
 白いソース / しろいソース - shiroi soosu - sốt kem (sốt trắng)
 新しいパソコン / あたらしいパソコン - atarashii pasokon - máy tính mới
+
+++ Mid Exam ++
+=== Chủ đề: Con người ===
+私 / わたし - watashi - Tôi
+学生 / がくせい - gakusei - Sinh viên
+先生 / せんせい - sensei - Giáo viên
+友だち / ともだち - tomodachi - Bạn bè
+会社員 / かいしゃいん - kaishain - Nhân viên công ty
+大学生 / だいがくせい - daigakusei - Sinh viên đại học
+家族 / かぞく - kazoku - Gia đình
+父 / ちち - chichi - Bố (của mình)
+母 / はは - haha - Mẹ (của mình)
+兄 / あni - ani - Anh trai (của mình)
+姉 / あね - ane - Chị gái (của mình)
+弟 / おとうと - otouto - Em trai (của mình)
+妹 / いもうと - imouto - Em gái (của mình)
+子供 / こども - kodomo - Con cái
+女の子 / おんなのこ - onna no ko - Bé gái
+男の子 / おトこのこ - otoko no ko - Bé trai
+大勢 / おおぜい - oozei - Nhiều người
+自分 / じぶん - jibun - Tự mình
+みんな / みんな - minna - Mọi người, tất cả
+
+=== Chủ đề: Hoạt động ===
+来ます / きます - kimasu - Đến
+行きます / いきます - ikimasu - Đi
+帰ります / かえります - kaerimasu - Trở về
+出ます / でます - demasu - Ra, rời khỏi
+入ります / はいります - hairimasu - Vào
+あります / あります - arimasu - Có (đồ vật)
+います / います - imasu - Có (người, động vật)
+します / します - shimasu - Làm (chơi thể thao)
+勉強します / べんきょうします - benkyou shimasu - Học tập
+散歩します / さんぽします - sanpo shimasu - Đi dạo
+注文します / ちゅうもんします - chuumon shimasu - Gọi món, đặt hàng
+楽しみます / たのしみま - tanoshimimasu - Tận hưởng
+作ります / つくります - tsukurimasu - Làm, chế tạo
+買います / かいます - kaimasu - Mua
+送ります / おくります - okurimasu - Gửi
+読みます / よみます - yomimasu - Đọc
+見ます / みます - mimasu - Nhìn, xem
+聞きます / ききます - kikimasu - Nghe, hỏi
+話します / はなします - hanashimasu - Nói chuyện
+知っています / しっています - shitte imasu - Biết
+分かります / わかります - wakarimasu - Hiểu
+紹介します / しょうかいします - shoukai shimasu - Giới thiệu
+会います / あいます - aimasu - Gặp gỡ
+起きます / おきます - okimasu - Thức dậy
+寝ます / ねます - nemasu - Ngủ
+浴びます / あびます - abimasu - Tắm (vòi sen)
+住んでいます / すんでいます - sunde imasu - Đang sống
+食べます / たべます - tabemasu - Ăn
+飲みます / のみます - nomimasu - Uống
+おなかが空きます / おなかがすきます - onaka ga sukimasu - Đói bụng
+座ります / すわります - suwarimasu - Ngồi
+始まります / はじまります - hajimarimasu - Bắt đầu
+終わります / おわります - owarimasu - Kết thúc
+疲れます / つかれます - tsukaremasu - Mệt mỏi
+
+=== Chủ đề: Tính từ ===
+美味しい / おいしい - oishii - Ngon
+不味い / まずい - mazui - Dở
+甘い / あまい - amai - Ngọt
+辛い / からい - karai - Cay
+近い / ちかい - chikai - Gần
+遠い / とおい - tooi - Xa
+楽しい / たのしい - tanoshii - Vui vẻ
+詰まらない / つまらない - tsumaranai - Chán, tẻ nhạt
+安い / やすい - yasui - Rẻ
+高い / たかい - takai - Đắt, cao
+小さい / ちいさい - chiisai - Nhỏ
+大きい / おおきい - ookii - To, lớn
+古い / ふるい - furui - Cũ
+新しい / あたらしい - atarashii - Mới
+汚い / きたない - kitanai - Bẩn
+黒い / くろい - kuroi - Màu đen
+白い / しろい - shiroi - Màu trắng
+良い / いい - ii - Tốt
+悪い / わるい - warui - Xấu, không tốt
+広い / ひろい - hiroi - Rộng
+狭い / せまい - semai - Chật, hẹp
+可愛い / かわいい - kawaii - Dễ thương
+薄い / うすい - usui - Nhạt, mỏng
+濃い / こい - koi - Đậm, dày
+面白い / おもしろい - omoshiroi - Thú vị
+悲しい / かなしい - kanashii - Buồn
+難しい / むずかしい - muzukashii - Khó
+簡単 / かんたん - kantan - Dễ
+賑やか / にぎやか - nigiyaka - Náo nhiệt
+静か / しずか - shizuka - Yên tĩnh
+好き / すき - suki - Thích
+嫌い / きらい - kirai - Ghét
+上手 / じょうず - jouzu - Giỏi
+下手 / へた - heta - Kém
+色々 / いろいろ - iroiro - Nhiều loại, đa dạng
+素敵 / すてき - suteki - Tuyệt vời, đẹp
+綺麗 / きれい - kirei - Đẹp, sạch
+親切 / しんせつ - shinsetsu - Tốt bụng, thân thiện
+大変 / たいへん - taihen - Vất vả, khó khăn
+忙しい / いそがしい - isogashii - Bận rộn
+
+=== Chủ đề: Nhà hàng / món ăn ===
+ご飯 / ごはん - gohan - Cơm, bữa ăn
+料理 / りょうり - ryouri - Món ăn, nấu ăn
+野菜 / やさい - yasai - Rau củ
+紅茶 / こうちゃ - koucha - Trà đen
+魚 / さかな - sakana - Cá
+卵 / たまご - tamago - Trứng
+牛乳 / ぎゅうにゅう - gyuunyuu - Sữa bò
+水 / みず - mizu - Nước
+味 / あじ - aji - Mùi vị
+パン - pan - Bánh mì
+サラダ - sarada - Xà lách, salad
+フルーツ - furuutsu - Trái cây
+オレンジジュース - orenji juusu - Nước cam
+ミルクティー - miruku tii - Trà sữa
+コーヒー - koohii - Cà phê
+チョコレート - chokoreeto - Sô-cô-la
+クッキー - kukkii - Bánh quy
+レストラン - resutoran - Nhà hàng
+スプーン - supoon - Cái thìa
+
+=== Chủ đề: Thời gian ===
+時間 / じかん - jikan - Thời gian
+月曜日 / げつようび - getsuyoubi - Thứ hai
+火曜日 / かようび - kayoubi - Thứ ba
+水曜日 / すいようび - suiyoubi - Thứ tư
+木曜日 / もくようび - mokuyoubi - Thứ năm
+金曜日 / きんようび - kinyoubi - Thứ sáu
+土曜日 / どようび - doyoubi - Thứ bảy
+日曜日 / にちようび - nichiyoubi - Chủ nhật
+今 / いま - ima - Bây giờ
+今日 / きょう - kyou - Hôm nay
+一昨日 / おととい - ototoi - Hôm kia
+昨日 / きのう - kinou - Hôm qua
+明日 / あした - ashita - Ngày mai
+朝 / あさ - asa - Buổi sáng
+昼 / ひる - hiru - Buổi trưa
+夜 / よる - yoru - Buổi tối
+毎日 / まいにち - mainichi - Mỗi ngày
+毎週 / まいしゅう - maishuu - Mỗi tuần
+先週 / せんしゅう - senshuu - Tuần trước
+午後 / ごご - gogo - Buổi chiều (PM)
+午前 / ごぜん - gozen - Buổi sáng (AM)
+一日 / いちにち - ichinichi - Một ngày
+最初 / さいしょ - saisho - Đầu tiên
+最後 / さいご - saigo - Cuối cùng
+初めて / はじめて - hajimete - Lần đầu tiên
+
+=== Chủ đề: Công việc / IT ===
+通勤します / つうきんします - tsuukin shimasu - Đi làm
+全社員 / ぜんしゃいん - zenshain - Toàn bộ nhân viên
+朝礼 / ちょうれい - chourei - Họp đầu giờ sáng
+ミーティング - miitingu - Cuộc họp
+プロジェクトリーダ - purojekuto riidaa - Trưởng dự án
+お客様 / おきゃくさま - okyakusama - Khách hàng
+仕様 / しよう - shiyou - Đặc tả, yêu cầu kỹ thuật
+確認します / かくにんします - kakunin shimasu - Xác nhận, kiểm tra
+開発計画 / かいはつけいかく - kaihatsu keikaku - Kế hoạch phát triển
+メンバー - menbaa - Thành viên
+指示を出す / しじをだす - shiji o dasu - Đưa ra chỉ thị
+進捗 / しんちょく - shinchoku - Tiến độ
+状況 / じょうきょう - joukyou - Tình hình, trạng thái
+残業します / ざんぎょうします - zangyou shimasu - Làm thêm giờ
+チーム - chiimu - Đội, nhóm
+種類 / しゅるい - shurui - Loại, chủng loại
+雰囲気 / ふんいき - fun'iki - Bầu không khí
+将来 / しょうらい - shourai - Tương lai
+機能 / きのう - kinou - Chức năng
+役立つ / やくだつ - yakudatsu - Hữu ích, có ích
+喜ぶ / よろこぶ - yorokobu - Vui mừng
+嬉しい / うれしい - ureshii - Vui, hạnh phúc
+
+=== Chủ đề: Địa điểm / Trường học ===
+大学 / だいがく - daigaku - Đại học
+学校 / がっこう - gakkou - Trường học
+教室 / きょうしつ - kyoushitsu - Phòng học
+部屋 / へや - heya - Phòng
+会議 / かいぎ - kaigi - Cuộc họp
+家 / いえ - ie - Nhà (house)
+うち / うち - uchi - Nhà (home)
+店 / みせ - mise - Cửa hàng
+庭 / にわ - niwa - Vườn
+国 / くに - kuni - Quốc gia, đất nước
+山 / やま - yama - Núi
+海 / うmi - umi - Biển
+モール - mooru - Trung tâm thương mại
+ビル - biru - Tòa nhà
+
+=== Chủ đề: Từ để hỏi / Chỉ định ===
+これ - kore - Cái này
+それ - sore - Cái đó
+あれ - are - Cái kia
+この - kono - ~ này
+その - sono - ~ đó
+あの - ano - ~ kia
+どれ - dore - Cái nào
+どの - dono - ~ nào
+どのくらい - dono kurai - Khoảng bao lâu / bao nhiêu
+なん - nan - Mấy
+なにで - nani de - Bằng cái gì
+なに - nani - Cái gì
+どこ - doko - Ở đâu
+だれ - dare - Ai
+いつ - itsu - Khi nào
+いくら - ikura - Bao nhiêu (tiền)
+どう - dou - Như thế nào
+どんな - donna - ~ như thế nào
+
+=== Chủ đề: Khác ===
+後 / あと - ato - Sau, sau khi
+中 / なか - naka - Bên trong
+もの / もの - mono - Đồ vật, vật dụng
+音楽 / おんがく - ongaku - Âm nhạc
+映画 / えいが - eiga - Phim
+本 / ほん - hon - Sách
+新聞 / しんぶん - shinbun - Báo
+お風呂 / おふろ - ofuro - Bồn tắm
+買い物 / かいもの - kaimono - Mua sắm
+旅行 / りょこう - ryokou - Du lịch
+話 / はなし - hanashi - Câu chuyện
+木 / き - ki - Cây cối
+かばん - kaban - Cặp, túi xách
+仕事 / しごと - shigoto - Công việc
+サッカー - sakkaa - Bóng đá
+スポーツ - supootsu - Thể thao
+ジャズ - jazu - Nhạc jazz
+メール - meeru - Email
+テレビ - terebi - Tivi
+ニュース - nyuusu - Tin tức
+インターネット - intaanetto - Mạng internet
+ドラマ - dorama - Phim truyền hình
+シャツ - shatsu - Áo sơ mi
+ジーンズ - jiinzu - Quần bò
+テスト - tesuto - Bài kiểm tra
+パーティー - paatii - Bữa tiệc
+シャワー - shawaa - Vòi sen
+いつも - itsumo - Luôn luôn
+普通 / ふつう - futsuu - Bình thường
+大抵 / たいてい - taitei - Thường thì
+よく - yoku - Thường xuyên
+たくさん - takusan - Nhiều
+あまり - amari - Không... lắm
+とても - totemo - Rất
+本当に / ほんとうに - hontou ni - Thực sự
+一番 / いちばん - ichiban - Nhất, số một
+少し / すこし - sukoshi - Một chút
+ちょっと - chotto - Một chút, một lát
+特に / とくに - tokuni - Đặc biệt
+また - mata - Lại, thêm vào
+でも - demo - Nhưng
+一緒に / いっしょに - issho ni - Cùng nhau
+そして - soshite - Và, sau đó
+それから - sorekara - Sau đó, tiếp theo
