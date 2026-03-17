@@ -50,7 +50,8 @@ function parseDataTxt(text) {
 
 async function loadVocabData() {
   const response = await fetch("Data.txt");
-  const text = await response.text();
+  const buffer = await response.arrayBuffer();
+  const text = new TextDecoder("utf-8").decode(buffer);
   vocabData = parseDataTxt(text);
 }
 
