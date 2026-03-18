@@ -22,6 +22,22 @@
         <div class="topic-chips" id="topicChips"></div>
       </nav>
 
+      <section class="feature-settings">
+        <label class="mode-toggle ai-toggle">
+          <input type="checkbox" id="aiEnabled" />
+          AI Learning Features
+        </label>
+        <input
+          type="password"
+          id="geminiApiKey"
+          class="api-key-input"
+          placeholder="Gemini API Key"
+        />
+        <button class="btn btn-ai-save" onclick="saveAiSettings()">
+          Save AI Key
+        </button>
+      </section>
+
       <!-- Stats -->
       <div class="stats-panel" id="statsPanel">
         <div class="stat-item">
@@ -29,15 +45,15 @@
           <span class="stat-value" id="statTotal">0</span>
         </div>
         <div class="stat-item stat-known">
-          <span class="stat-label">✅ Known</span>
+          <span class="stat-label">Remembered</span>
           <span class="stat-value" id="statKnown">0</span>
         </div>
         <div class="stat-item stat-unknown">
-          <span class="stat-label">❌ Unknown</span>
+          <span class="stat-label">Forgot</span>
           <span class="stat-value" id="statUnknown">0</span>
         </div>
         <div class="stat-item stat-progress">
-          <span class="stat-label">📊 Progress</span>
+          <span class="stat-label">Progress</span>
           <span class="stat-value" id="statPercent">0%</span>
         </div>
       </div>
@@ -45,14 +61,13 @@
       <main>
         <div class="progress" id="progress">Card 0 / 0</div>
         <div class="review-badge" id="reviewBadge" style="display: none">
-          🔁 Reviewing unknown words
+          Reviewing forgotten words
         </div>
 
-        <div
-          class="flashcard-container"
-          id="flashcard-container"
-          onclick="flipCard()"
-        >
+        <div class="flashcard-container" id="flashcard-container">
+          <div class="swipe-bg swipe-bg-known">Remembered</div>
+          <div class="swipe-bg swipe-bg-unknown">Forgot</div>
+          <div class="swipe-bg swipe-bg-flip">Flip</div>
           <div class="flashcard" id="flashcard">
             <div class="card-face card-front" id="card-front">
               <div class="kanji" id="kanji"></div>
@@ -65,31 +80,73 @@
           </div>
         </div>
 
+        <div class="ai-panel">
+          <div class="ai-actions">
+            <button class="btn btn-ai" onclick="handleExampleSentence()">
+              Xem ví dụ
+            </button>
+            <button class="btn btn-ai" onclick="handleMnemonic()">
+              Memory Master
+            </button>
+            <button class="btn btn-quiz" onclick="openSmartQuiz()">
+              AI Smart Quiz
+            </button>
+            <button class="btn btn-revenge" onclick="startRevengeDeck()">
+              Revenge Deck
+            </button>
+          </div>
+          <div class="ai-result" id="aiResult">AI output will appear here.</div>
+        </div>
+
+        <section class="quiz-panel" id="quizPanel" style="display: none">
+          <div class="quiz-header">
+            <h3>Smart Quiz</h3>
+            <button class="btn" onclick="closeSmartQuiz()">Close Quiz</button>
+          </div>
+          <p class="quiz-progress" id="quizProgress">Question 1 / 1</p>
+          <p class="quiz-question" id="quizQuestion">Question</p>
+          <div class="quiz-choices" id="quizChoices"></div>
+          <p class="quiz-feedback" id="quizFeedback"></p>
+        </section>
+
+        <div class="session-summary" id="sessionSummary" style="display: none">
+          <h2>Session Complete</h2>
+          <p>Total cards: <strong id="summaryTotal">0</strong></p>
+          <p>Remembered: <strong id="summaryRemembered">0</strong></p>
+          <p>Not remembered: <strong id="summaryForgot">0</strong></p>
+          <div class="story-box" id="storyBox">
+            Context story will appear here.
+          </div>
+          <button class="btn btn-flip" onclick="restartSession()">
+            Practice Again
+          </button>
+        </div>
+
         <!-- Known/Unknown buttons (visible after flip) -->
         <div class="mark-buttons" id="markButtons">
-          <button class="btn btn-known" onclick="markCard('known')">
-            ✅ Known
+          <button class="btn btn-known" onclick="markCard('remembered')">
+            Remembered
           </button>
-          <button class="btn btn-notknown" onclick="markCard('unknown')">
-            ❌ Unknown
+          <button class="btn btn-notknown" onclick="markCard('forgot')">
+            Forgot
           </button>
         </div>
 
         <div class="controls">
           <button class="btn" onclick="prevCard()" title="Previous">
-            ⬅ Prev
+            Prev
           </button>
           <button class="btn btn-flip" onclick="flipCard()" title="Flip">
-            🔄 Flip
+            Flip
           </button>
           <button
             class="btn btn-shuffle"
             onclick="shuffleCards()"
             title="Shuffle"
           >
-            🔀 Shuffle
+            Shuffle
           </button>
-          <button class="btn" onclick="nextCard()" title="Next">Next ➡</button>
+          <button class="btn" onclick="nextCard()" title="Next">Next</button>
         </div>
 
         <div class="controls-secondary">
@@ -98,16 +155,32 @@
             Random mode
           </label>
           <button class="btn btn-reset" onclick="resetProgress()">
-            🗑 Reset Progress
+            Reset Progress
           </button>
         </div>
       </main>
 
       <footer>
-        <p>Space: flip | ← →: navigate | S: shuffle</p>
+        <p>Space: flip | Left/Right: remember/forgot | Up: flip | S: shuffle</p>
       </footer>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+    <script src="src/core/config.js"></script>
+    <script src="src/core/state.js"></script>
+    <script src="src/utils/helpers.js"></script>
+    <script src="src/data/vocabService.js"></script>
+    <script src="src/services/progressService.js"></script>
+    <script src="src/services/aiService.js"></script>
+    <script src="src/features/flashcard/flashcardController.js"></script>
+    <script src="src/features/flashcard/flashcardUI.js"></script>
+    <script src="src/features/swipe/useSwipe.js"></script>
+    <script src="src/features/quiz/quizGenerator.js"></script>
+    <script src="src/features/revenge/revengeMode.js"></script>
+    <script src="src/controllers/sessionController.js"></script>
+    <script src="src/controllers/aiController.js"></script>
+    <script src="src/ui/renderers.js"></script>
+    <script src="src/app.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
