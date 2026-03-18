@@ -216,6 +216,9 @@ const app = (() => {
     const state = getState();
     resetSwipeVisuals();
     dom.markButtons.classList.remove("visible");
+    dom.flashcard.style.transition = "";
+    dom.flashcard.style.transform = "";
+    dom.flashcard.style.opacity = "";
 
     if (!state.currentCards.length) {
       showSummary();
@@ -248,11 +251,14 @@ const app = (() => {
       normalizeStatus,
     );
 
-    renderers.renderProgress(
-      dom.progressEl,
-      state.currentCardIndex,
-      state.currentCards.length,
-    );
+    const totalInSession =
+      state.sessionStats.total || state.currentCards.length;
+    const completedInSession =
+      (state.sessionStats.remembered || 0) + (state.sessionStats.forgot || 0);
+    const currentInSession =
+      totalInSession > 0 ? Math.min(totalInSession, completedInSession + 1) : 0;
+
+    renderers.renderProgress(dom.progressEl, currentInSession, totalInSession);
 
     dom.flashcardContainer.classList.remove("animate");
     void dom.flashcardContainer.offsetWidth;
@@ -261,7 +267,7 @@ const app = (() => {
 
   function flipCard() {
     const state = getState();
-    if (!state.currentCards.length) return;
+    if (!state.currentCards.length || state.isTransitioning) return;
     const next = !state.isFlipped;
     setState({ isFlipped: next });
     dom.flashcard.classList.toggle("flipped", next);
@@ -628,7 +634,7 @@ const app = (() => {
       },
     });
 
-    dom.quizPanel.style.display = "block";
+    dom.quizPanel.style.display = "flex";
     renderQuizQuestion();
   }
 

@@ -189,8 +189,15 @@ const useSwipe = (() => {
         this.card.style.opacity = "0";
         window.setTimeout(() => this.options.onSwipe(direction), 220);
       } else {
-        this.reset();
-        if (!this.hasMoved) this.options.onTap();
+        if (!this.hasMoved) {
+          this.card.style.transition = "";
+          this.card.style.transform = "";
+          this.card.style.opacity = "";
+          this.options.onReset();
+          this.options.onTap();
+        } else {
+          this.reset();
+        }
       }
 
       this.activePointer = null;
@@ -200,7 +207,12 @@ const useSwipe = (() => {
       this.card.style.transition = "transform 200ms ease, opacity 200ms ease";
       this.card.style.transform = "translateX(0) rotate(0deg)";
       this.card.style.opacity = "1";
-      window.setTimeout(() => this.options.onReset(), 200);
+      window.setTimeout(() => {
+        this.card.style.transition = "";
+        this.card.style.transform = "";
+        this.card.style.opacity = "";
+        this.options.onReset();
+      }, 200);
     }
   }
 

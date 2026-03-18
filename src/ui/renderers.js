@@ -1,7 +1,7 @@
 const renderers = (() => {
-  function renderProgress(progressEl, currentIndex, total) {
+  function renderProgress(progressEl, current, total) {
     progressEl.textContent =
-      total > 0 ? `Card ${currentIndex + 1} / ${total}` : "Card 0 / 0";
+      total > 0 ? `Card ${current} / ${total}` : "Card 0 / 0";
   }
 
   function renderStats(elements, stats) {
