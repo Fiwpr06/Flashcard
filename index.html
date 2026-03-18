@@ -2,72 +2,73 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
     <title>Japanese Flashcard</title>
     <link rel="stylesheet" href="style.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Nunito:wght@400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@500;600;700&family=JetBrains+Mono:wght@400;600;700&family=Fira+Code:wght@400;600&family=Press+Start+2P&family=Caveat:wght@500;700&family=Cormorant+Garamond:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
+    <script src="https://unpkg.com/lucide@latest"></script>
   </head>
   <body>
     <div class="app">
-      <header>
-        <h1>🇯🇵 Japanese Flashcard</h1>
+      <!-- Top Navigation -->
+      <header class="top-nav">
+        <h1 class="app-title">Nihongo</h1>
+
+        <div class="nav-center">
+          <div class="progress-bar-container">
+            <div class="progress-bar-fill" id="progressBarFill"></div>
+          </div>
+          <!-- Hidden stat elements to keep JS happy but not cluttered -->
+          <div class="stats-hidden" style="display: none">
+            <span id="statTotal"></span>
+            <span id="statKnown"></span>
+            <span id="statUnknown"></span>
+            <span id="statPercent"></span>
+          </div>
+        </div>
+
+        <div class="nav-actions">
+          <button
+            class="icon-btn"
+            onclick="openModal('filterModal')"
+            title="Filters"
+          >
+            <i data-lucide="filter"></i>
+          </button>
+          <button
+            class="icon-btn"
+            onclick="openModal('settingsModal')"
+            title="Settings"
+          >
+            <i data-lucide="settings"></i>
+          </button>
+        </div>
       </header>
 
-      <!-- Navigation -->
-      <nav class="nav">
-        <div class="unit-tabs" id="unitTabs"></div>
-        <div class="topic-chips" id="topicChips"></div>
-      </nav>
-
-      <section class="feature-settings">
-        <label class="mode-toggle ai-toggle">
-          <input type="checkbox" id="aiEnabled" />
-          AI Learning Features
-        </label>
-        <input
-          type="password"
-          id="geminiApiKey"
-          class="api-key-input"
-          placeholder="Gemini API Key"
-        />
-        <button class="btn btn-ai-save" onclick="saveAiSettings()">
-          Save AI Key
-        </button>
-      </section>
-
-      <!-- Stats -->
-      <div class="stats-panel" id="statsPanel">
-        <div class="stat-item">
-          <span class="stat-label">Total</span>
-          <span class="stat-value" id="statTotal">0</span>
-        </div>
-        <div class="stat-item stat-known">
-          <span class="stat-label">Remembered</span>
-          <span class="stat-value" id="statKnown">0</span>
-        </div>
-        <div class="stat-item stat-unknown">
-          <span class="stat-label">Forgot</span>
-          <span class="stat-value" id="statUnknown">0</span>
-        </div>
-        <div class="stat-item stat-progress">
-          <span class="stat-label">Progress</span>
-          <span class="stat-value" id="statPercent">0%</span>
-        </div>
-      </div>
-
-      <main>
+      <!-- Main Stage -->
+      <main class="main-stage">
         <div class="progress" id="progress">Card 0 / 0</div>
+
         <div class="review-badge" id="reviewBadge" style="display: none">
           Reviewing forgotten words
         </div>
 
         <div class="flashcard-container" id="flashcard-container">
-          <div class="swipe-bg swipe-bg-known">Remembered</div>
-          <div class="swipe-bg swipe-bg-unknown">Forgot</div>
-          <div class="swipe-bg swipe-bg-flip">Flip</div>
+          <div class="swipe-bg swipe-bg-known">
+            <i data-lucide="check-circle" size="48"></i>
+          </div>
+          <div class="swipe-bg swipe-bg-unknown">
+            <i data-lucide="x-circle" size="48"></i>
+          </div>
+          <div class="swipe-bg swipe-bg-flip">
+            <i data-lucide="rotate-cw" size="48"></i>
+          </div>
           <div class="flashcard" id="flashcard">
             <div class="card-face card-front" id="card-front">
               <div class="kanji" id="kanji"></div>
@@ -80,89 +81,321 @@
           </div>
         </div>
 
-        <div class="ai-panel">
-          <div class="ai-actions">
-            <button class="btn btn-ai" onclick="handleExampleSentence()">
-              Xem ví dụ
-            </button>
-            <button class="btn btn-ai" onclick="handleMnemonic()">
-              Memory Master
-            </button>
-            <button class="btn btn-quiz" onclick="openSmartQuiz()">
-              AI Smart Quiz
-            </button>
-            <button class="btn btn-revenge" onclick="startRevengeDeck()">
-              Revenge Deck
-            </button>
-          </div>
-          <div class="ai-result" id="aiResult">AI output will appear here.</div>
+        <!-- Toast Notification for AI Actions -->
+        <div class="toast-container" id="toastContainer">
+          <div class="toast-content" id="aiResult"></div>
+          <button class="icon-btn toast-close" onclick="closeToast()">
+            <i data-lucide="x" size="18"></i>
+          </button>
         </div>
 
-        <section class="quiz-panel" id="quizPanel" style="display: none">
-          <div class="quiz-header">
-            <h3>Smart Quiz</h3>
-            <button class="btn" onclick="closeSmartQuiz()">Close Quiz</button>
-          </div>
-          <p class="quiz-progress" id="quizProgress">Question 1 / 1</p>
-          <p class="quiz-question" id="quizQuestion">Question</p>
-          <div class="quiz-choices" id="quizChoices"></div>
-          <p class="quiz-feedback" id="quizFeedback"></p>
-        </section>
-
+        <!-- Session Summary -->
         <div class="session-summary" id="sessionSummary" style="display: none">
           <h2>Session Complete</h2>
-          <p>Total cards: <strong id="summaryTotal">0</strong></p>
-          <p>Remembered: <strong id="summaryRemembered">0</strong></p>
-          <p>Not remembered: <strong id="summaryForgot">0</strong></p>
+          <div class="summary-stats">
+            <div><span>Total</span> <strong id="summaryTotal">0</strong></div>
+            <div class="color-green">
+              <span>Remembered</span> <strong id="summaryRemembered">0</strong>
+            </div>
+            <div class="color-red">
+              <span>Forgot</span> <strong id="summaryForgot">0</strong>
+            </div>
+          </div>
           <div class="story-box" id="storyBox">
             Context story will appear here.
           </div>
-          <button class="btn btn-flip" onclick="restartSession()">
+          <button class="btn btn-primary btn-block" onclick="restartSession()">
             Practice Again
           </button>
         </div>
 
-        <!-- Known/Unknown buttons (visible after flip) -->
-        <div class="mark-buttons" id="markButtons">
-          <button class="btn btn-known" onclick="markCard('remembered')">
-            Remembered
-          </button>
-          <button class="btn btn-notknown" onclick="markCard('forgot')">
-            Forgot
-          </button>
-        </div>
-
-        <div class="controls">
-          <button class="btn" onclick="prevCard()" title="Previous">
-            Prev
-          </button>
-          <button class="btn btn-flip" onclick="flipCard()" title="Flip">
-            Flip
-          </button>
-          <button
-            class="btn btn-shuffle"
-            onclick="shuffleCards()"
-            title="Shuffle"
-          >
-            Shuffle
-          </button>
-          <button class="btn" onclick="nextCard()" title="Next">Next</button>
-        </div>
-
-        <div class="controls-secondary">
-          <label class="mode-toggle">
-            <input type="checkbox" id="randomMode" onchange="toggleMode()" />
-            Random mode
-          </label>
-          <button class="btn btn-reset" onclick="resetProgress()">
-            Reset Progress
-          </button>
-        </div>
+        <!-- Quiz Panel Overlay -->
+        <section
+          class="modal-overlay quiz-modal"
+          id="quizPanel"
+          style="display: none"
+        >
+          <div class="modal-content quiz-content">
+            <div class="quiz-header">
+              <h3>Smart Quiz</h3>
+              <button class="icon-btn" onclick="closeSmartQuiz()">
+                <i data-lucide="x"></i>
+              </button>
+            </div>
+            <p class="quiz-progress" id="quizProgress">Question 1 / 1</p>
+            <p class="quiz-question" id="quizQuestion">Question</p>
+            <div class="quiz-choices" id="quizChoices"></div>
+            <p class="quiz-feedback" id="quizFeedback"></p>
+          </div>
+        </section>
       </main>
 
-      <footer>
-        <p>Space: flip | Left/Right: remember/forgot | Up: flip | S: shuffle</p>
+      <!-- Bottom Action Dock -->
+      <footer class="bottom-dock">
+        <div
+          class="ai-actions-dock"
+          id="aiActions"
+          style="display: none; opacity: 0"
+        >
+          <button
+            class="btn-text-icon"
+            onclick="handleExampleSentenceWrapper()"
+            id="btnExample"
+          >
+            <i data-lucide="message-circle" size="18"></i> Xem ví dụ
+          </button>
+          <button
+            class="btn-text-icon"
+            onclick="handleMnemonicWrapper()"
+            id="btnMemoryMaster"
+          >
+            <i data-lucide="brain" size="18"></i> Memory Master
+          </button>
+        </div>
+
+        <div class="dock-controls">
+          <button
+            class="icon-btn mute-btn"
+            onclick="prevCard()"
+            title="Previous"
+          >
+            <i data-lucide="chevron-left"></i>
+          </button>
+
+          <!-- The primary action area changes based on flipped state -->
+          <div class="action-core">
+            <button
+              class="btn btn-flip-main"
+              id="btnFlipMain"
+              onclick="appFlipAndUI()"
+            >
+              Flip
+            </button>
+
+            <div class="mark-buttons" id="markButtons">
+              <button
+                class="btn-mark btn-notknown"
+                onclick="markCardWrapper('forgot')"
+              >
+                <i data-lucide="x" size="28"></i>
+              </button>
+              <button
+                class="btn-mark btn-known"
+                onclick="markCardWrapper('remembered')"
+              >
+                <i data-lucide="check" size="28"></i>
+              </button>
+            </div>
+          </div>
+
+          <button class="icon-btn mute-btn" onclick="nextCard()" title="Next">
+            <i data-lucide="chevron-right"></i>
+          </button>
+        </div>
       </footer>
+
+      <!-- Modals -->
+
+      <!-- Filter Modal -->
+      <div
+        class="modal-overlay"
+        id="filterModal"
+        style="display: none"
+        onclick="closeModalOutside(event, 'filterModal')"
+      >
+        <div class="modal-content bottom-sheet">
+          <div class="modal-header">
+            <h2>Filters & Modes</h2>
+            <button class="icon-btn" onclick="closeModal('filterModal')">
+              <i data-lucide="x"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="unit-tabs" id="unitTabs"></div>
+            <div class="topic-chips" id="topicChips"></div>
+            <div class="divider"></div>
+            <label class="mode-toggle">
+              <input type="checkbox" id="randomMode" onchange="toggleMode()" />
+              Random mode
+            </label>
+            <button
+              class="btn btn-outline btn-block mt-3"
+              onclick="shuffleCards()"
+            >
+              <i data-lucide="shuffle" size="18"></i> Shuffle Current Deck
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Settings Modal -->
+      <div
+        class="modal-overlay"
+        id="settingsModal"
+        style="display: none"
+        onclick="closeModalOutside(event, 'settingsModal')"
+      >
+        <div class="modal-content bottom-sheet">
+          <div class="modal-header">
+            <h2>Settings</h2>
+            <button class="icon-btn" onclick="closeModal('settingsModal')">
+              <i data-lucide="x"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="settings-group">
+              <h3>Theme</h3>
+              <div class="theme-grid" id="themeGrid">
+                <button
+                  class="theme-option"
+                  type="button"
+                  data-theme="tranquil-zen"
+                  onclick="setTheme('tranquil-zen')"
+                >
+                  <span class="theme-swatch swatch-zen"></span>
+                  Tranquil Zen
+                </button>
+                <button
+                  class="theme-option"
+                  type="button"
+                  data-theme="modern-education"
+                  onclick="setTheme('modern-education')"
+                >
+                  <span class="theme-swatch swatch-modern"></span>
+                  Modern Education
+                </button>
+                <button
+                  class="theme-option"
+                  type="button"
+                  data-theme="traditional-paper"
+                  onclick="setTheme('traditional-paper')"
+                >
+                  <span class="theme-swatch swatch-paper"></span>
+                  Traditional Paper
+                </button>
+                <button
+                  class="theme-option"
+                  type="button"
+                  data-theme="soft-dark"
+                  onclick="setTheme('soft-dark')"
+                >
+                  <span class="theme-swatch swatch-dark"></span>
+                  Soft Dark Mode
+                </button>
+                <button
+                  class="theme-option"
+                  type="button"
+                  data-theme="cyberpunk-tokyo"
+                  onclick="setTheme('cyberpunk-tokyo')"
+                >
+                  <span class="theme-swatch swatch-cyberpunk"></span>
+                  Cyberpunk Tokyo
+                </button>
+                <button
+                  class="theme-option"
+                  type="button"
+                  data-theme="ghibli-watercolor"
+                  onclick="setTheme('ghibli-watercolor')"
+                >
+                  <span class="theme-swatch swatch-ghibli"></span>
+                  Ghibli Watercolor
+                </button>
+                <button
+                  class="theme-option"
+                  type="button"
+                  data-theme="retro-8bit"
+                  onclick="setTheme('retro-8bit')"
+                >
+                  <span class="theme-swatch swatch-retro"></span>
+                  Retro 8-bit
+                </button>
+                <button
+                  class="theme-option"
+                  type="button"
+                  data-theme="zen-garden"
+                  onclick="setTheme('zen-garden')"
+                >
+                  <span class="theme-swatch swatch-zen-garden"></span>
+                  Zen Garden
+                </button>
+                <button
+                  class="theme-option"
+                  type="button"
+                  data-theme="sakura-bloom"
+                  onclick="setTheme('sakura-bloom')"
+                >
+                  <span class="theme-swatch swatch-sakura"></span>
+                  Sakura Bloom
+                </button>
+                <button
+                  class="theme-option"
+                  type="button"
+                  data-theme="imperial-red"
+                  onclick="setTheme('imperial-red')"
+                >
+                  <span class="theme-swatch swatch-imperial"></span>
+                  Imperial Red
+                </button>
+                <button
+                  class="theme-option"
+                  type="button"
+                  data-theme="indigo-ukiyoe"
+                  onclick="setTheme('indigo-ukiyoe')"
+                >
+                  <span class="theme-swatch swatch-indigo"></span>
+                  Indigo Ukiyo-e
+                </button>
+              </div>
+            </div>
+
+            <div class="settings-group">
+              <h3>AI Magic</h3>
+              <label class="mode-toggle">
+                <input type="checkbox" id="aiEnabled" />
+                Enable AI Features
+              </label>
+              <input
+                type="password"
+                id="geminiApiKey"
+                class="api-key-input mt-2"
+                placeholder="Gemini API Key"
+              />
+              <button
+                class="btn btn-primary btn-block mt-2"
+                onclick="saveAiSettingsWrapper()"
+              >
+                Save AI Key
+              </button>
+            </div>
+
+            <div class="settings-group mt-4">
+              <h3>Advanced Modes</h3>
+              <button
+                class="btn btn-outline btn-block"
+                onclick="openSmartQuizWrapper()"
+              >
+                <i data-lucide="zap" size="18"></i> AI Smart Quiz
+              </button>
+              <button
+                class="btn btn-outline btn-block mt-2"
+                onclick="startRevengeDeckWrapper()"
+              >
+                <i data-lucide="flame" size="18"></i> Revenge Deck
+              </button>
+            </div>
+
+            <div class="settings-group mt-4">
+              <h3>Data</h3>
+              <button
+                class="btn btn-danger btn-block"
+                onclick="resetProgress()"
+              >
+                Reset Progress
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
@@ -182,5 +415,162 @@
     <script src="src/ui/renderers.js"></script>
     <script src="src/app.js"></script>
     <script src="script.js"></script>
+
+    <!-- UI Enhancements Scripts -->
+    <script>
+      // Initialize Lucide Icons
+      lucide.createIcons();
+
+      // Modal logic
+      function openModal(id) {
+        document.getElementById(id).style.display = "flex";
+      }
+      function closeModal(id) {
+        document.getElementById(id).style.display = "none";
+      }
+      function closeModalOutside(e, id) {
+        if (e.target.id === id) {
+          closeModal(id);
+        }
+      }
+
+      function closeToast() {
+        const toast = document.getElementById("toastContainer");
+        toast.classList.remove("visible");
+      }
+
+      let toastTimer = null;
+      const THEME_KEY = "jp_flashcard_theme";
+
+      function updateThemeButtons() {
+        const current = document.body.dataset.theme || "modern-education";
+        const options = document.querySelectorAll(".theme-option");
+        options.forEach((button) => {
+          button.classList.toggle("active", button.dataset.theme === current);
+        });
+      }
+
+      function setTheme(themeName) {
+        document.body.dataset.theme = themeName;
+        localStorage.setItem(THEME_KEY, themeName);
+        updateThemeButtons();
+      }
+
+      function initTheme() {
+        const saved = localStorage.getItem(THEME_KEY);
+        const initialTheme = saved || "modern-education";
+        document.body.dataset.theme = initialTheme;
+        updateThemeButtons();
+      }
+
+      // Wrapping app functions to connect with UI state
+      function appFlipAndUI() {
+        if (typeof window.flipCard === "function") {
+          window.flipCard();
+        }
+      }
+
+      function markCardWrapper(status) {
+        if (typeof window.markCard === "function") {
+          window.markCard(status);
+        }
+      }
+
+      async function handleExampleSentenceWrapper() {
+        showToast();
+        if (typeof window.handleExampleSentence === "function") {
+          await window.handleExampleSentence();
+        }
+      }
+
+      async function handleMnemonicWrapper() {
+        showToast();
+        if (typeof window.handleMnemonic === "function") {
+          await window.handleMnemonic();
+        }
+      }
+
+      function saveAiSettingsWrapper() {
+        if (typeof window.saveAiSettings === "function") {
+          window.saveAiSettings();
+        }
+        showToast();
+      }
+
+      function openSmartQuizWrapper() {
+        closeModal("settingsModal");
+        window.openSmartQuiz();
+      }
+
+      function startRevengeDeckWrapper() {
+        closeModal("settingsModal");
+        window.startRevengeDeck();
+      }
+
+      function showToast() {
+        const toast = document.getElementById("toastContainer");
+        toast.classList.add("visible");
+        if (toastTimer) clearTimeout(toastTimer);
+        toastTimer = setTimeout(() => closeToast(), 8000);
+      }
+
+      function syncUiFromState(state) {
+        const total = state.sessionStats?.total || 0;
+        const completed =
+          (state.sessionStats?.remembered || 0) +
+          (state.sessionStats?.forgot || 0);
+        const bar = document.getElementById("progressBarFill");
+        if (bar) {
+          const pct = total > 0 ? (completed / total) * 100 : 0;
+          bar.style.width = pct + "%";
+        }
+
+        const flipMain = document.getElementById("btnFlipMain");
+        const aiTools = document.getElementById("aiActions");
+        const btnExample = document.getElementById("btnExample");
+        const btnMemoryMaster = document.getElementById("btnMemoryMaster");
+        const aiEnabled =
+          !!window.aiService &&
+          typeof window.aiService.getAiEnabled === "function" &&
+          window.aiService.getAiEnabled();
+
+        if (flipMain) {
+          flipMain.style.display = state.isFlipped ? "none" : "flex";
+        }
+
+        if (aiTools) {
+          if (state.isFlipped) {
+            aiTools.style.display = "flex";
+            requestAnimationFrame(() => {
+              aiTools.style.opacity = "1";
+            });
+
+            if (btnExample) btnExample.classList.toggle("disabled", !aiEnabled);
+            if (btnMemoryMaster)
+              btnMemoryMaster.classList.toggle("disabled", !aiEnabled);
+          } else {
+            aiTools.style.opacity = "0";
+            aiTools.style.display = "none";
+            if (btnExample) btnExample.classList.remove("disabled");
+            if (btnMemoryMaster) btnMemoryMaster.classList.remove("disabled");
+          }
+        }
+      }
+
+      function bindUiState() {
+        if (
+          !window.appState ||
+          typeof window.appState.subscribe !== "function"
+        ) {
+          setTimeout(bindUiState, 120);
+          return;
+        }
+        syncUiFromState(window.appState.getState());
+        window.appState.subscribe(syncUiFromState);
+      }
+
+      initTheme();
+      bindUiState();
+    </script>
   </body>
 </html>
