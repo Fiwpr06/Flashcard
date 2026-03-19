@@ -766,3 +766,57 @@ Jポップ - J-poppu - nhạc J-Pop
 一緒に / いっしょに - issho ni - Cùng nhau
 そして - soshite - Và, sau đó
 それから - sorekara - Sau đó, tiếp theo
+
+++ Unit 6 ++
+=== Chủ đề: Thời gian ===
+土曜日 / どようび - doyoubi - Thứ bảy
+一日 / いちにち - ichinichi - Một ngày
+
+=== Chủ đề: Địa điểm / Cửa hàng ===
+ショッピングモール - shoppingu mooru - Trung tâm mua sắm
+モール - mooru - Trung tâm thương mại
+庭 / にわ - niwa - Vườn
+本屋 / ほんya - honya - Nhà sách
+映画館 / えいがかん - eigakan - Rạp chiếu phim
+中国 / ちゅうごく - chuugoku - Trung Quốc
+ビル - biru - Tòa nhà
+
+=== Chủ đề: Hoạt động ===
+買い物 / かいもの - kaimono - Mua sắm
+います / います - imasu - Có (người, động vật)
+疲れます / つかれます - tsukaremasu - Mệt
+お腹がすきます / おなかがすきます - onaka ga sukimasu - Đói bụng
+会います / あいます - aimasu - Gặp
+知っています / しっています - shitte imasu - Biết
+出ます（店を） / でます（みせを） - demasu (mise o) - Ra khỏi (cửa tiệm)
+送ります / おくります - okurimasu - Tiễn, gửi
+
+=== Chủ đề: Tính từ ===
+綺麗な / きれいな - kirei na - Đẹp
+大きい / おおきい - ookii - Lớn, to
+広い / ひろい - hiroi - Rộng
+白い / しろい - shiroi - Trắng
+可愛い / かわいい - kawaii - Dễ thương
+薄i（味が） / うすい（あじが） - usui (aji ga) - Nhạt nhẽo (vị)
+面白い / おもしろい - omoshiroi - Hay, thú vị
+悲しい / かなしい - kanashii - Buồn
+
+=== Chủ đề: Nhà hàng / món ăn ===
+味 / あじ - aji - Vị
+ピザ - piza - Pizza
+
+=== Chủ đề: Khác ===
+中 / なか - naka - Bên trong
+木 / き - ki - Cây
+ポロシャツ - poroshatsu - Áo thun có cổ, áo polo
+チェック - chekku - Sọc ca rô
+スカート - sukaato - Váy
+ジーンズ - jiinzu - Quần jean
+ポーチ - poochi - Ví, bóp
+ボールペン - boorupen - Bút bi
+ストライプ - sutoraipu - Sọc thẳng
+シャツ - shatsu - Áo sơ mi
+靴 / くつ - kutsu - Giày
+食器 / しょっき - shokki - Chén bát
+また - mata - Lại
+歴史 / れきし - rekishi - Lịch sử
