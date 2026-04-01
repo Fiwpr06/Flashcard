@@ -820,3 +820,106 @@ Jポップ - J-poppu - nhạc J-Pop
 食器 / しょっき - shokki - Chén bát
 また - mata - Lại
 歴史 / れきし - rekishi - Lịch sử
+
+++ Check ++
+=== Chủ đề: Danh từ ===
+教室 / きょうしつ - kyoushitsu - Phòng học
+授業 / じゅぎょう - jugyou - Tiết học, giờ học
+部屋 / へや - heya - Phòng
+会議 / かいぎ - kaigi - Cuộc họp
+仕事 / しごと - shigoto - Công việc
+旅行 / りょこう - ryokou - Du lịch
+鞄 / かばん - kaban - Cặp, túi xách
+
+=== Chủ đề: Động từ ===
+します - shimasu - Làm (chơi <thể thao>)
+散歩します / さんぽします - sanposhimasu - Đi dạo
+楽しみます / たのしみます - tanoshimimasu - Tận hưởng
+作ります / つくります - tsukurimasu - Làm, chế tạo
+送ります / おくります - okurimasu - Gửi
+分かります / わかります - wakarimasu - Hiểu
+浴びます / あびます - abimasu - Tắm (vòi sen)
+お腹が空きます / おなかがすきます - onaka ga sukimasu - Đói bụng
+始まります / はじまります - hajimarimasu - Bắt đầu
+疲れます / つかれます - tsukaremasu - Mệt mỏi
+
+=== Chủ đề: Tính từ ===
+不味い / まずい - mazui - Dở
+近い / ちかい - chikai - Gần
+遠い / とおい - tooi - Xa
+つまらない - tsumaranai - Chán, tẻ nhạt
+古い / ふるい - furui - Cũ
+新しい / あたらしい - atarashii - Mới
+汚い / きたない - kitanai - Bẩn
+悪い / わるい - warui - Xấu, không tốt
+広い / ひろい - hiroi - Rộng
+狭い / せまい - semai - Chật, hẹp
+薄い / うすい - usui - Nhạt, mỏng
+濃い / こい - koi - Đậm, dày
+悲しい / かなしい - kanashii - Buồn
+難しい / むずかしい - muzukashii - Khó
+簡単（な） / かんたん（な） - kantan (na) - Dễ
+賑やか（な） / にぎやか（な） - nigiyaka (na) - Náo nhiệt
+静か（な） / しずか（な） - shizuka (na) - Yên tĩnh
+嫌い（な） / きらい（な） - kirai (na) - Ghét
+上手（な） / じょうず（な） - jouzu (na) - Giỏi
+下手（な） / へた（な） - heta (na) - Kém
+色々（な） / いろいろ（な） - iroiro (na) - Nhiều loại, đa dạng
+素敵（な） / すてき（な） - suteki (na) - Tuyệt vời, đẹp
+綺麗（な） / きれい（な） - kirei (na) - Đẹp, sạch
+親切（な） / しんせつ（な） - shinsetsu (na) - Tốt bụng, thân thiện
+
+=== Chủ đề: Từ nối chỉ trình tự ===
+最初に / さいしょに - saisho ni - Đầu tiên
+それから - sorekara - Sau đó, từ sau đó
+そして - soshite - Và, thêm vào đó
+その後 / そのあと - sono ato - Sau đó
+まず - mazu - Trước tiên
+次に / つぎに - tsugi ni - Tiếp theo là
+最後に / さいごに - saigo ni - Cuối cùng
+
+=== Chủ đề: Phó từ nhấn mạnh mức độ ===
+とても - totemo - Rất
+特に / とくに - tokuni - Đặc biệt là
+たくさん - takusan - Nhiều (số lượng)
+少し / すこし - sukoshi - Một chút
+ちょっと - chotto - Một chút, hơi hơi
+本当に / ほんとうに - hontou ni - Thực sự
+大変 / たいへん - taihen - Rất, vô cùng
+
+=== Chủ đề: Phó từ chỉ tần suất ===
+いつも - itsumo - Luôn luôn, lúc nào cũng
+たいてい - taitei - Thường thường, đại để
+よく - yoku - Thường xuyên, hay
+普通 / ふつう - futsuu - Thông thường, bình thường
+時々 / ときどき - tokidoki - Thỉnh thoảng
+あまり - amari - Không... lắm (đi với phủ định)
+全然 / ぜんぜん - zenzen - Hoàn toàn không (đi với phủ định)
+
+=== Chủ đề: Mốc thời gian cơ bản ===
+朝 / あさ - asa - Buổi sáng
+昼 / ひる - hiru - Buổi trưa
+夜 / よる - yoru - Buổi tối
+晩 / ばん - ban - Buổi tối
+昨日 / きのう - kinou - Hôm qua
+今日 / きょう - kyou - Hôm nay
+明日 / あした - ashita - Ngày mai
+毎日 / まいにち - mainichi - Mỗi ngày
+先週 / せんしゅう - senshuu - Tuần trước
+今週 / こんしゅう - konshuu - Tuần này
+来週 / らいしゅう - raishuu - Tuần sau
+毎週 / まいしゅう - maishuu - Mỗi tuần
+先月 / せんげつ - sengetsu - Tháng trước
+去年 / きょねん - kyonen - Năm ngoái
+今年 / ことし - kotoshi - Năm nay
+
+=== Chủ đề: Từ để hỏi & Các từ khác ===
+くらい・ぐらい - kurai / gurai - Khoảng (thời gian, số lượng)
+頃 / ごろ - goro - Khoảng (thời điểm)
+自分で / じぶんで - jibun de - Tự mình
+どれ - dore - Cái nào
+どのN - dono N - N nào
+どのくらい - dono kurai - Khoảng bao lâu (/bao nhiêu)?
+いつ - itsu - Khi nào?
+いくら - ikura - Bao nhiêu? (tiền)
+どう - dou - Như thế nào?
