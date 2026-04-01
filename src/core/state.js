@@ -5,6 +5,7 @@ const appState = (() => {
     activeUnit: "all",
     currentCards: [],
     currentCardIndex: 0,
+    isVietnameseFront: false,
     isFlipped: false,
     isTransitioning: false,
     isRevengeMode: false,

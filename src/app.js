@@ -1,6 +1,7 @@
 const app = (() => {
   const { status, dataFilePath } = window.appConfig;
   const { normalizeStatus, getCardKey, shuffleArray } = window.helpers;
+  const FLASHCARD_MODE_KEY = "jp_flashcard_vietnamese_front";
 
   let swipeInstance = null;
   let audioContext = null;
@@ -57,7 +58,10 @@ const app = (() => {
 
   async function initialize() {
     const vocabData = await vocabService.fetchVocabData(dataFilePath);
-    setState({ vocabData });
+    setState({
+      vocabData,
+      isVietnameseFront: localStorage.getItem(FLASHCARD_MODE_KEY) === "1",
+    });
 
     setupAiSettingsUI();
     buildNav();
@@ -249,6 +253,7 @@ const app = (() => {
       card,
       statusValue,
       normalizeStatus,
+      state.isVietnameseFront,
     );
 
     const totalInSession =
@@ -309,6 +314,13 @@ const app = (() => {
     } else {
       rebuildCards();
     }
+  }
+
+  function toggleVietnameseFrontMode() {
+    const nextMode = !getState().isVietnameseFront;
+    localStorage.setItem(FLASHCARD_MODE_KEY, nextMode ? "1" : "0");
+    setState({ isVietnameseFront: nextMode, isFlipped: false });
+    renderCurrentCard();
   }
 
   function updateSessionStats(card, markStatus) {
@@ -805,6 +817,7 @@ const app = (() => {
     window.nextCard = nextCard;
     window.markCard = markCard;
     window.toggleMode = toggleMode;
+    window.toggleVietnameseFrontMode = toggleVietnameseFrontMode;
     window.resetProgress = resetProgress;
     window.restartSession = restartSession;
     window.handleExampleSentence = handleExampleSentence;

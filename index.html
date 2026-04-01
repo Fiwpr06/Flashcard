@@ -35,6 +35,14 @@
 
         <div class="nav-actions">
           <button
+            class="icon-btn mode-switch-btn"
+            id="flashcardLanguageToggle"
+            onclick="toggleVietnameseFrontModeWrapper()"
+            title="Chuyen che do mat truoc/mat sau"
+          >
+            <span id="flashcardModeLabel">JP->VI</span>
+          </button>
+          <button
             class="icon-btn"
             onclick="openModal('filterModal')"
             title="Filters"
@@ -470,6 +478,12 @@
         }
       }
 
+      function toggleVietnameseFrontModeWrapper() {
+        if (typeof window.toggleVietnameseFrontMode === "function") {
+          window.toggleVietnameseFrontMode();
+        }
+      }
+
       function markCardWrapper(status) {
         if (typeof window.markCard === "function") {
           window.markCard(status);
@@ -529,10 +543,23 @@
         const aiTools = document.getElementById("aiActions");
         const btnExample = document.getElementById("btnExample");
         const btnMemoryMaster = document.getElementById("btnMemoryMaster");
+        const languageToggle = document.getElementById(
+          "flashcardLanguageToggle",
+        );
+        const modeLabel = document.getElementById("flashcardModeLabel");
         const aiEnabled =
           !!window.aiService &&
           typeof window.aiService.getAiEnabled === "function" &&
           window.aiService.getAiEnabled();
+
+        const isVietnameseFront = !!state.isVietnameseFront;
+
+        if (languageToggle) {
+          languageToggle.classList.toggle("active", isVietnameseFront);
+        }
+        if (modeLabel) {
+          modeLabel.textContent = isVietnameseFront ? "VI->JP" : "JP->VI";
+        }
 
         if (flipMain) {
           flipMain.style.display = state.isFlipped ? "none" : "flex";
